@@ -1,16 +1,50 @@
-#root {
-    color: blue;
+#root{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
 
-    .January{
-    color: green;
+    section {
+        width: 100%;
+        max-width: 400px;
+        
+        .days {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 5%;
+            align-items: flex-start;
 
-       /*   &#1{
+            .day {
+                width: 10%;
+                border: 1px solid rgba(0,0,0,0.2);
+                text-align: center;
+                box-sizing: border-box;
+                padding: 5px 0;
+                margin-bottom: 10px;
+            }
+        }
+     }
 
-         } */
-    
-    .day {
+    button {
+        width: 120px;
+        height: 40px;
+        position: fixed;
+        top: 0; 
+        right: 0;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .day{
         color: red;
     }
 }
 
+@media only screen and (max-width:700px) {
+.day{
+    font-size: 20px;
+}
 }

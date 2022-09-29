@@ -83,7 +83,7 @@ const monthComponent = function (nth, name, days) {
   return `
         <section id="${nth}" class="${name}">
             <h2>${name}</h2>
-            ${daysHTML}
+           <div class="days"> ${daysHTML} </div>
         </section>
     
     `;
@@ -103,10 +103,10 @@ const rootElement = document.querySelector("#root");
 rootElement.insertAdjacentHTML("beforeend", "<button>Add month</button>");
 const buttonElement = rootElement.querySelector("button");
 
-let monthIndex = 0;
+//let monthIndex = 0;
 
 buttonElement.addEventListener("click", function () {
-  if (monthIndex < 12) {
+  for (let monthIndex = 0; monthIndex < 12; monthIndex++) {
     rootElement.insertAdjacentHTML(
       "beforeend",
       monthComponent(
@@ -115,10 +115,6 @@ buttonElement.addEventListener("click", function () {
         year[monthIndex].days
       )
     );
-    console.log(year[monthIndex]);
-    monthIndex++;
-  } else {
-    buttonElement.setAttribute("disabled", "");
   }
 });
 
