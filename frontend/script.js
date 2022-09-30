@@ -116,8 +116,24 @@ buttonElement.addEventListener("click", function () {
       )
     );
   }
+  initJanuaryEvents();
 });
 
 /* rootElement.insertAdjacentHTML("beforeend", monthComponent(1, "January", 31));
 rootElement.insertAdjacentHTML("beforeend", monthComponent(2, "February", 28));
 rootElement.insertAdjacentHTML("afterend", monthComponent(20, "Wok", 9)); */
+
+const hideDays = function (days) {
+  for (let day of days) {
+    day.classList.add("hidden");
+  }
+};
+
+let initJanuaryEvents = function () {
+  let days = document.querySelectorAll(".January .days .day");
+  for (let day of days) {
+    day.addEventListener("click", function () {
+      hideDays(days);
+    });
+  }
+};
