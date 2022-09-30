@@ -24,6 +24,7 @@
   box-sizing: border-box;
   padding: 5px 0;
   margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
 }
 #root button {
   width: 120px;
@@ -45,4 +46,10 @@
 }
 .hidden {
   display: none;
+}
+
+.clicked {
+  transform: rotate(180deg);
+  transition: all 0.5s ease-in-out;
+  background-color: rgb(62, 98, 242);
 }/*# sourceMappingURL=style.css.map */
